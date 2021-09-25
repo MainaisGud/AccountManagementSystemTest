@@ -10,7 +10,7 @@ class testclass {
 		CheckingAccount t1=new CheckingAccount();
 		t1.makeDeposit(10000);
 		double store = t1.getBalance();
-		assertEquals(store,10000,0.1);
+		assertEquals(store,10000);
 	}
 	
 	@Test
@@ -19,7 +19,7 @@ class testclass {
 		CheckingAccount t1 = new CheckingAccount();
 		t1.makeDeposit(5000);
 		double store = t1.getBalance();
-		assertNotEquals(store,10000,0.1);
+		assertNotEquals(store,10000);
 	}
 	
 	@Test
@@ -28,7 +28,7 @@ class testclass {
 		SavingsAccount t1= new SavingsAccount();
 		t1.makeDeposit(10000);
 		double store = t1.getBalance();
-		assertEquals(store,10000,0.1);
+		assertEquals(store,10000);
 	}
 
 	@Test
@@ -37,7 +37,7 @@ class testclass {
 		SavingsAccount t1 = new SavingsAccount();
 		t1.makeDeposit(5000);
 		double store = t1.getBalance();
-		assertNotEquals(store,10000,0.1);
+		assertNotEquals(store,10000);
 	}
 	
 	@Test
@@ -97,7 +97,7 @@ class testclass {
 		t1.makeDeposit(500);
 		double temp=t1.CalculateZakaat();
 		double result=t1.getBalance()*(2.5/100);
-		assertNotEquals(result,temp,0.1);
+		assertNotEquals(result,temp);
 	}
 	
 	@Test
@@ -107,7 +107,7 @@ class testclass {
 		t1.makeDeposit(10000);
 		t1.makeWithdrawal(9000);
 		double store = t1.getBalance();
-		assertEquals(store,-1000,0.1);
+		assertEquals(store,-1000);
 	}
 	
 	@Test
@@ -117,7 +117,7 @@ class testclass {
 		t1.makeDeposit(10000);
 		t1.makeWithdrawal(9000);
 		double store = t1.getBalance();
-		assertEquals(store,-1000,0.1);
+		assertEquals(store,-1000);
 	}
 
 }
