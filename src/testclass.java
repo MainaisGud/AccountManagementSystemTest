@@ -56,7 +56,7 @@ class testclass {
 		CheckingAccount t1=new CheckingAccount();
 		CheckingAccount t2=new CheckingAccount();
 		t1.makeDeposit(3500);
-		boolean store=t1.transferAmount(t2, 500);
+		boolean store=t1.transferAmount(t2, 5000);
 		assertEquals(false,store);
 	}
 	
@@ -76,7 +76,7 @@ class testclass {
 		SavingsAccount t1 = new SavingsAccount();
 		SavingsAccount t2 = new SavingsAccount();
 		t1.makeDeposit(3500);
-		boolean store = t1.transferAmount(t2, 500);
+		boolean store = t1.transferAmount(t2, 5000);
 		assertEquals(false,store);
 	}
 
@@ -107,7 +107,7 @@ class testclass {
 		t1.makeDeposit(10000);
 		t1.makeWithdrawal(9000);
 		double store = t1.getBalance();
-		assertEquals(store,-1000);
+		assertEquals(store,1000);
 	}
 	
 	@Test
@@ -117,7 +117,7 @@ class testclass {
 		t1.makeDeposit(10000);
 		t1.makeWithdrawal(9000);
 		double store = t1.getBalance();
-		assertEquals(store,-1000);
+		assertEquals(store,1000);
 	}
 
 }
